@@ -16,8 +16,20 @@ header {
     margin: 0 0 25px 0;
 }
 
-header>h1 {
+.navbar>h1 {
     font-size: 100px;
+}
+
+.navbar>nav {
+    align-items: center;
+    
+
+}
+.action-call {
+    margin: 50px 0 0 0;
+    text-align: left 0;
+    text-align: end 0;
+    font-size: 50px;
 }
 
 .works {
