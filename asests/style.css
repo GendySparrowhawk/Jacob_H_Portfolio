@@ -1,11 +1,16 @@
 body {
     background-image: linear-gradient(10deg, rgba(0, 212, 255, 1) 0%, rgba(78, 78, 200, 1) 49%, rgba(0, 212, 255, 1) 100%);
+    ;
+    background-repeat: no-repeat;
+    size: 100%;
+    font-family: sans-serif;
 }
 
 header {
     width: 95%;
     position: relative;
     text-align: center;
+    margin: 4px auto;
 }
 
 .heroimg {
@@ -17,25 +22,57 @@ header {
 }
 
 .navbar {
-    width: 90%;
-    position: absolute;
-    top: 8px;
     display: flex;
     justify-content: space-between;
-    color: white;
+    position: absolute;
+    top: 8px;
+    right: 60px;
+    padding: 8px;
+    font-size: 20px;
+    background-color: #ff4690;
 }
-.navbar h1 {
-    font-size: 300px;
+.navbar a {
+    color: white;
     
 }
 
-.navbar nav {
-    padding: 0 8px 8px;
-    color: white;   
+.action-call {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    text-align: left;
+    top: 8px;
+    left: 60px;
+    color: white;
+}
+.action-call h1 {
+    font-size: 75px;
+    margin-bottom: 250px;
+}
+.action-call h2 {
     font-size: 50px;
+    margin: 0;
+    padding: 8px 0;
 }
 
-.action-call {
-    position: absolute;
-    font-size: 200px;
+.works {
+    text-align: center;
+}
+
+.portal {
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid #ff4690;
+    border-radius: 10px;
+
+    max-width: 90%;
+    margin: 15px auto;
+    background-color: antiquewhite;
+}
+.portal img{
+    max-width: 200px;
+    border-radius: 10px;
+}
+footer {
+    text-align: center;
 }
