@@ -12,3 +12,5 @@ When I click Full Stack
 Then I am brought to a page where I see my works in progress
 When I click Video editing 
 Then I see my videos listed in a column 
+###my code
+All code present was written from the gorund up by me with heay referances taken from various sites and tutorials in and out of class. 
