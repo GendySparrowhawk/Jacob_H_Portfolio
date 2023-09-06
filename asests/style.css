@@ -4,6 +4,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     font-family: sans-serif;
+    font-size: calc(16px + 0.390vw);
 }
 
 header {
@@ -51,14 +52,14 @@ header {
 }
 
 .action-call h1 {
-    font-size: 100px;
+    /* font-size: 100px; */
     margin-bottom: 250px;
 }
 
 .action-call h2 {
-    font-size: 76px;
     margin: 0;
     padding: 8px 0;
+    font-size: 3rem;
 }
 
 .works {
@@ -97,10 +98,9 @@ footer {
 @keyframes fadein {
     0% {
         transform: translatex(100%);
-        opacity: 0
+        opacity: 0;
     }
 
-    ;
 
     100% {
         transform: translatex(0%);
@@ -108,4 +108,3 @@ footer {
     }
 }
 
-@media screen {}
