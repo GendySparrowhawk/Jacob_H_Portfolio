@@ -1,3 +1,10 @@
+// @mixin blue-complementary-color-gradient($base-color) {
+//   $complementary-color-1: adjust-hue($base-color, 30deg);
+//   $complementary-color-2: lighten($complementary-color-1, 10%); 
+//   background: linear-gradient(to bottom right, $complementary-color-1, $complementary-color-2);
+//   color: #ffffff;
+// }
+
 html, body, #root {
   height: 100%;
   font-family: sans-serif;
@@ -5,12 +12,20 @@ html, body, #root {
 #root {
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
 }
 
-$main-color: #213547;
+$main-color: #202c64;
 
 main {
   flex: 1;
+  display: flex;
+  background: linear-gradient(to bottom right, adjust-hue($main-color, 180deg), lighten(adjust-hue($main-color, 30deg), 10%));
+  color: #ffffff;
+  background-image: url('./public/assets/triangles.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .container-fluid {
@@ -21,7 +36,6 @@ main {
   width: 100%;
 }
 
-
 footer {
   margin: 0;
   display: flex;
@@ -29,20 +43,23 @@ footer {
   align-items: center;
   padding: 15px 2% 15px;
   background-color: $main-color;
+  color: #fff;
   img {
     padding: 0 10px;
+    max-width: 20px;
+    max-height: 20px;
   }
 }
 
 header {
-  background-color:$main-color;
-  padding: 10px;
+  background-color: $main-color;
+  padding: 15px 2% 15px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
 
   nav {
     display: flex;
+    justify-content: space-between;
     align-items: center;
 
     a {
@@ -55,5 +72,119 @@ header {
         font-weight: bold;
       }
     }
+  }
+}
+
+main {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .text {
+    padding: 20px;
+    max-width: 50%; // Adjust as needed
+  }
+
+  .face {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+
+    img {
+      max-width: 400px;
+      max-height: 400px;
+      margin-right: 10px;
+      position: absolute;
+      top: 0;
+    }
+
+    img:first-child {
+      right: 0;
+      animation: moveLeft1 1s ease-out forwards;
+      animation-delay: 0.2s;
+    }
+
+    img:nth-child(2) {
+      right: 0px;
+      animation-delay: 0.4s;
+      animation: moveLeft2 1s ease-out forwards;
+      z-index: 2;
+    }
+
+    img:last-child {
+      right: 0px;
+      animation-delay: 0.6s;
+      animation: moveLeft3 1s ease-out forwards;
+      z-index: 1;
+    }
+  }
+}
+
+@keyframes moveLeft1 {
+  to {
+    transform: translateX(-200px);
+  }
+}
+
+@keyframes moveLeft2 {
+  to {
+    transform: translateX(-340px);
+  }
+}
+
+@keyframes moveLeft3 {
+  to {
+    transform: translateX(-400px);
+  }
+}
+
+.cta {
+  color: #0f142e;
+}
+
+form {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 400px;
+  font-size: 18px;
+
+  > div {
+    margin-bottom: 15px;
+
+    &:last-child {
+      margin-bottom: 0;
+      height: 200px;
+    }
+  }
+
+  label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #333;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    margin: 0; 
+  }
+
+  button {
+    background-color: $main-color;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
   }
 }

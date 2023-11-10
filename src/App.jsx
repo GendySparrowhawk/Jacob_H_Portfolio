@@ -10,13 +10,13 @@ function App() {
   return (
     <>
       <Header />
-      <main className="container-fluid">
+      {/* <main className="container-fluid"> */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
-      </main>
+      {/* </main> */}
 
       <Footer />
     </>
