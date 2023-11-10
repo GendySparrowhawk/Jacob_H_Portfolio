@@ -3,12 +3,15 @@ import { NavLink } from "react-router-dom";
 function Header() {
   
   return (
-    <header className="d-flex justify-content-between align-items-center pt-2 ps-3 pe-3 bg-dark">
-      <h3 className="text-light">Portfolio Practice</h3>
+    <header>
       <nav>
+        <div>
         <NavLink to="/">Home</NavLink>
+        </div>
+        <div>
         <NavLink to="/about">About</NavLink>
         <NavLink to="/contact">Contact</NavLink>
+        </div>
       </nav>
     </header>
   );
