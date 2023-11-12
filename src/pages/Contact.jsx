@@ -6,6 +6,18 @@ function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if(!email.trim() || !emailRegex.test(email)) {
+      alert("that email address is not valid");
+      return;
+    }
+
+    if(!email.trim() || !message.trum()) {
+      alert("please fillout both the email and mesage portions, thank you");
+      return ;
+    }
     const formData = { email, message };
 
     fetch("https://getform.io/f/6388ce58-e971-4876-a25c-693527db2114", {
