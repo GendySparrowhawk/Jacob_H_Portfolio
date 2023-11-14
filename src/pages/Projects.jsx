@@ -1,9 +1,9 @@
-import preprAir from "../public/assets/Perp-air.png";
-import dnd from "../public/assets/d20_icon.jpg";
-import saveSate from "../public/assets/svae_state.jpg";
-import dndLogo from "../public/assets/dnd2.jpg";
-import tie from "../public/assets/tie.jpg";
-import readMe from "../public/assets/raedme.png";
+// import preprAir from "../assets/Prep-air.png";
+// import dnd from "../assets/d20_icon.jpg";
+// import saveSate from "../assets/svae_state.jpg";
+// import dndLogo from "../assets/dnd2.jpg";
+// import tie from "../assets/tie.jpg";
+// import readMe from "../assets/raedme.png";
 
 function Projects() {
   return (

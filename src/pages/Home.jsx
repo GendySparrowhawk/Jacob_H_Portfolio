@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import RightFace from "../public/assets/right_face.png";
-import LeftFace from "../public/assets/left_face_full.png";
-import LeftLines from "../public/assets/left-lines.png";
+import RightFace from "../assets/right_face.png";
+import LeftFace from "../assets/left_face_full.png";
+import LeftLines from "../assets/left-lines.png";
 import { NavLink } from "react-router-dom";
 
 function Home() {

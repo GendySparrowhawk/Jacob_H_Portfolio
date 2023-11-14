@@ -1,6 +1,6 @@
-import LinkedInImage from '../public/assets/LInked_in.png';
-import InstagramImage from '../public/assets/ig.png';
-import GithubImage from '../public/assets/github.png';
+import LinkedInImage from '../assets/LInked_in.png';
+import InstagramImage from '../assets/ig.png';
+import GithubImage from '../assets/github.png';
 
 function Footer() {
   const date = new Date();

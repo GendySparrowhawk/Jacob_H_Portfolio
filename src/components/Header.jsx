@@ -1,7 +1,20 @@
 import { NavLink } from "react-router-dom";
-import resume from "../public/assets/Jacob_Hoefer_Resume.pdf"
+import { useState } from 'react';
+import resume from "../assets/Jacob_Hoefer_Resume.pdf"
 
 function Header() {
+  const [resumeUrl] = useState(resume);
+
+  const handleDownload = () => {
+    const link = document.createElement('a');
+    link.href = resumeUrl;
+    link.setAttribute('download', 'Jacob_Hoefer_Resume.pdf');
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
+
+
   return (
     <header>
       <nav>
@@ -11,7 +24,7 @@ function Header() {
         <div className="away">
           <NavLink to="/about">About</NavLink>
           <NavLink to="/contact">Contact</NavLink>
-          <NavLink download={resume}>Resume</NavLink>
+          <button className="resume" onClick={handleDownload}>Resume</button>
         </div>
       </nav>
     </header>
