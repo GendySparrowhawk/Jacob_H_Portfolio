@@ -19,7 +19,7 @@ body,
 
 $main-color: #202c64;
 
-$main-color-opacity: rgba(32, 44, 100, 0.2);
+$main-color-opacity: rgba(32, 44, 100, 0.7);
 
 $main-font: "M PLUS Rounded 1c", sans-serif;
 
@@ -252,7 +252,8 @@ form {
 }
 
 .about_me {
-  margin: 0 auto;
+  margin: 10px auto;
+  padding: 3rem;
   max-width: 80%;
   display: flex;
   align-items: center;
@@ -272,9 +273,13 @@ form {
   }
 
   h1 {
-    font-size: 4rem;
+    font-size: 4.5rem;
   }
   h2 {
+    font-size: 2rem;
+  }
+
+  p {
     font-size: 2rem;
   }
 }
@@ -285,7 +290,7 @@ form {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  
+
   h1 {
     font-size: 5rem;
   }
@@ -339,13 +344,13 @@ form {
   margin: 0 auto;
   align-items: center;
   justify-content: center;
-  
+
   h1 {
     font-family: $main-font;
     font-size: 4rem;
   }
   iframe {
-    margin-top: 15px ;
+    margin-top: 15px;
     padding: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
@@ -361,7 +366,20 @@ form {
   font-size: 24px;
   font-family: sans-serif;
 }
-
 .graphics {
-  max-width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+
+  .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    overflow: hidden;
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
 }
