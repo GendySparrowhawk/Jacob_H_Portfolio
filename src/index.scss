@@ -1,31 +1,55 @@
-// @mixin blue-complementary-color-gradient($base-color) {
-//   $complementary-color-1: adjust-hue($base-color, 30deg);
-//   $complementary-color-2: lighten($complementary-color-1, 10%);
-//   background: linear-gradient(to bottom right, $complementary-color-1, $complementary-color-2);
-//   color: #ffffff;
-// }
+$main-color: #202c64;
+$main-color-opacity: rgba(32, 44, 100, 0.7);
+$main-font: "M PLUS Rounded 1c", sans-serif;
+$body-font: "Roboto Flex", sans-serif;
+$dropdownOpen: false;
+// animations
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex&display=swap');
 
+@keyframes moveLeft1 {
+  to {
+    transform: translateX(-200px);
+  }
+}
+
+@keyframes moveLeft2 {
+  to {
+    transform: translateX(-360px);
+  }
+}
+
+@keyframes moveLeft3 {
+  to {
+    transform: translateX(-420px);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    visibility: visible;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// global settings 
 html,
 body,
 #root {
-  height: 100%;
+  flex: 1;
   font-family: sans-serif;
-}
-#root {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
-$main-color: #202c64;
-
-$main-color-opacity: rgba(32, 44, 100, 0.7);
-
-$main-font: "M PLUS Rounded 1c", sans-serif;
-
-main {
-  flex: 1;
-  display: flex;
+main {  
+  min-height: 100vh;  
+  position: relative;
   background: linear-gradient(
     to bottom right,
     adjust-hue($main-color, 180deg),
@@ -38,16 +62,10 @@ main {
   background-repeat: no-repeat;
 }
 
-.container-fluid {
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: 15px;
-  padding-left: 15px;
-  width: 100%;
-}
 
 footer {
   margin: 0;
+  margin-top: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -86,26 +104,45 @@ header {
   }
 }
 
-main {
-  flex: 1;
+// home page cta
+.cta {
+  margin: 15px auto;
+  width: 80%;
+  height: 40rem;
   display: flex;
+  position: relative;
   justify-content: space-between;
   align-items: center;
+  padding: 20px;
+  background-color: $main-color-opacity;
+  border: 2px solid black;
+  border-radius: 10px;
+  animation: fadeInUp 1s ease-out forwards;
 
   .text {
-    padding: 20px;
-    max-width: 50%; // Adjust as needed
+    margin-top: 0;
+    display:flex;
+    flex-direction: column;
+    align-content: space-between;
+    font-family: $body-font;
+    color: #ced4f3;
+  
+    h1 {
+      font-size: 4rem;
+      margin-top: 0;
+    }
+    p {
+      font-size: 2rem;
+    }
   }
 
   .face {
-    position: relative;
     display: flex;
-    justify-content: flex-start;
-    margin-top: -45rem;
 
     img {
       max-width: 500px;
       max-height: 500px;
+      margin-top: 4rem;
       margin-right: 10px;
       position: absolute;
       top: 0;
@@ -132,46 +169,38 @@ main {
     }
   }
 }
+// home page dropdowns and sections
+.works {
+  margin: 10px auto;
+  background-color: $main-color-opacity;
+  border: 2px solid black;
+  border-radius: 8px;
+  width: 80%;
+  padding: 20px;
 
-@keyframes moveLeft1 {
-  to {
-    transform: translateX(-200px);
+}
+
+.graphics {
+  max-width: 800px;
+  margin: 0 auto;
+
+  .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    overflow: hidden;
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+
+    }
   }
 }
 
-@keyframes moveLeft2 {
-  to {
-    transform: translateX(-360px);
-  }
-}
 
-@keyframes moveLeft3 {
-  to {
-    transform: translateX(-420px);
-  }
-}
-
-@keyframes fadeInUp {
-  0% {
-    visibility: visible;
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.cta {
-  margin-top: -25rem;
-  margin-left: 5rem;
-  padding: 5px, 20px;
-  color: #0f142e;
-  font-size: 2rem;
-  animation: fadeInUp 1.5s ease-out forwards;
-}
-
+// contact page
 form {
   margin: 0 auto;
   background-color: #fff;
@@ -219,38 +248,9 @@ form {
   }
 }
 
-.dropdown {
-  position: relative;
-  display: inline-block;
-  &-content {
-    display: none;
-    position: absolute;
-    background-color: $main-color;
-    min-width: 160px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    &:hover {
-      cursor: pointer;
-    }
 
-    a {
-      color: #f0f3ff;
-      padding: 12px 16px;
-      text-decoration: none;
-      display: block;
-
-      &:hover {
-        background-color: darken($main-color, 10%);
-      }
-    }
-  }
-  &:hover {
-    .dropdown-content {
-      display: block;
-    }
-  }
-}
-
+  
+// about me page
 .about_me {
   margin: 10px auto;
   padding: 3rem;
@@ -284,77 +284,6 @@ form {
   }
 }
 
-.proj {
-  margin: 0, auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  h1 {
-    font-size: 5rem;
-  }
-}
-
-.projCard {
-  font-family: $main-font;
-  color: #ddd;
-  border: 2px solid $main-color;
-  background-color: $main-color-opacity;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  margin: 16px;
-  padding: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 90%;
-
-  img {
-    max-width: 400px;
-    max-height: 400px;
-    margin-right: 16px;
-  }
-  div {
-    flex: 1;
-
-    h2 {
-      font-size: 3rem;
-    }
-    p {
-      font-size: 1.5rem;
-      margin-bottom: 8px;
-    }
-
-    a {
-      color: #f0f3ff;
-      padding: 12px 16px;
-      text-decoration: none;
-      display: block;
-      &:hover {
-        cursor: pointer;
-      }
-    }
-  }
-}
-
-.video-container {
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  align-items: center;
-  justify-content: center;
-
-  h1 {
-    font-family: $main-font;
-    font-size: 4rem;
-  }
-  iframe {
-    margin-top: 15px;
-    padding: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-}
 
 .resume {
   background-color: $main-color;
@@ -365,21 +294,4 @@ form {
   cursor: pointer;
   font-size: 24px;
   font-family: sans-serif;
-}
-.graphics {
-  max-width: 800px;
-  margin: 0 auto;
-
-  .swiper-slide {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 8px;
-    overflow: hidden;
-
-    img {
-      max-width: 100%;
-      max-height: 100%;
-    }
-  }
 }
