@@ -171,33 +171,99 @@ header {
 }
 // home page dropdowns and sections
 .works {
+  display: flex;
   margin: 10px auto;
   background-color: $main-color-opacity;
   border: 2px solid black;
   border-radius: 8px;
   width: 80%;
   padding: 20px;
+    img {
+      max-width: 200px;
+      max-height: 300px;
+      padding: 2rem;
+      transition: transform .3s ease-in-out;
+    }
 
+    img:hover {
+      transform: scale(1.1);
+      cursor: pointer;
+    }
+
+    img.selected {
+      filter: grayscale(0%);
+      transform: scale(1.5);
+      z-index: 1;
+    }
+
+    a {
+      color: aliceblue;
+    }
 }
-
-.graphics {
-  max-width: 800px;
-  margin: 0 auto;
-
-  .swiper-slide {
+  .fullstack {
+    display: block;
+    margin: 10px auto;
+    background-color: $main-color-opacity;
+    border: 2px solid black;
+    border-radius: 8px;
+    width: 80%;
+    padding: 20px;
+      a {
+        color: aliceblue;
+      }
+  }
+  .workcard {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-color: #d477d481;
+    max-width: 25rem;
     border-radius: 8px;
-    overflow: hidden;
+    padding: 1rem;
+    transition: transform .3s ease-in-out;
+
+    h2 {
+      margin: 0 auto;
+    }
+
+    p {
+      text-align: center;
+      font-size: larger;
+    }
 
     img {
-      max-width: 100%;
-      max-height: 100%;
 
+      max-width: 100px;
+      max-height: 100px;
     }
+
   }
+  .workcard:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    background-color: #e799e781;
+  }
+
+.selected-image-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
 }
+
+.selected-image {
+  max-width: 90vw;
+  max-height: 90vw;
+  cursor: pointer;
+}
+
 
 
 // contact page
@@ -283,7 +349,6 @@ form {
     font-size: 2rem;
   }
 }
-
 
 .resume {
   background-color: $main-color;
