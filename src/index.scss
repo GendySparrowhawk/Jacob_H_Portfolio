@@ -212,6 +212,12 @@ header {
         color: aliceblue;
       }
   }
+
+  .card-sort {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
   .workcard {
     display: flex;
     flex-direction: column;
