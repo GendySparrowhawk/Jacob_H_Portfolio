@@ -15,7 +15,7 @@ import LeftLines from "../assets/left-lines.png";
 import oToole from "../assets/FINTAN O'TOOLE instagram.png";
 import unruly1 from "../assets/unruly1.png";
 import autumn from "../assets/autumn_work.png";
-import downstairs from "../assets/downstairs sign redux CAPS.png";
+
 import flat from "../assets/flat,373x,075,f.jpg";
 import MH from "../assets/MH.png";
 import Yokai from "../assets/icon.png";
@@ -104,14 +104,6 @@ function Home() {
               alt="magical"
               className={selectedImage === MH ? "selected" : ""}
               onClick={() => toggleImageClick(MH)}
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img
-              src={downstairs}
-              alt="Labyrinth Books"
-              className={selectedImage === downstairs ? "selected" : ""}
-              onClick={() => toggleImageClick(downstairs)}
             />
           </SwiperSlide>
         </Swiper>
