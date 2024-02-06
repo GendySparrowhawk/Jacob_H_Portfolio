@@ -20,6 +20,7 @@ import flat from "../assets/flat,373x,075,f.jpg";
 import MH from "../assets/MH.png";
 import Yokai from "../assets/icon.png";
 import SaveState from "../assets/SaveStateFullLogo-backgroundRemoved.jpeg";
+import Prepair from "../assets/prepAir.plane.png";
 
 function Home() {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -131,27 +132,81 @@ function Home() {
           </p>
         </div>
         <div className="card-sort">
-          <div className="workcard">
-            <div className="work-header">
-              <h2>Yoaki</h2>
-              <img src={Yokai} alt="Yokai" />
+          <a
+            href="https://github.com/HunterMuratore/Yokai"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div className="workcard">
+              <div className="work-header">
+                <h2>Yoaki</h2>
+                <img src={Yokai} alt="Yokai" />
+              </div>
               <p>
                 A react app for compiling, saving and purchasing items for
                 friends "Wishlists." This app makes API calls, stores user data
                 and allows users to change their data, and interact with others.
               </p>
             </div>
-          </div>
-          <div className="workcard">
-            <div className="work-header">
-              <h2>SaveState</h2>
-              <img src={SaveState} alt="Save State" />
+          </a>
+          <a
+            href="https://github.com/GendySparrowhawk/Save_State"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div className="workcard">
+              <div className="work-header">
+                <h2>SaveState</h2>
+                <img src={SaveState} alt="Save State" />
+              </div>
+              <p>
+                Another group project where I mostly worked on the backend.
+                Getting API calls working both internally and externally.
+              </p>
             </div>
-            <p>
-              Another group project where I mostly worked on the backend.
-              Getting API calls working both internally and externally.
-            </p>
-          </div>
+          </a>
+          <a
+            href="https://github.com/pwoodkotch/prepAir_project01_app/tree/main"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div className="workcard">
+              <div className="work-header">
+                <h2>Prep-Air</h2>
+                <img src={Prepair} alt="Perp-Air" />
+              </div>
+              <p>
+                The 1st group project I worked on. A lot of great first steps,
+                including learning how to use the google maps API and the basics
+                of JS syntax. It's a simple website but I really like what we
+                did with the time and knowledge we had.{" "}
+              </p>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div className="works">
+        <h2>Vieo Editing</h2>
+        <div className="video-container">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/YhRHCCZ0aOg?si=WgJgVyF9DzNggCDY"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+          ></iframe>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/01L8LPkOShA?si=5L57LDM0SXvDrFIS"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+          ></iframe>
         </div>
       </div>
       {selectedImage && (
