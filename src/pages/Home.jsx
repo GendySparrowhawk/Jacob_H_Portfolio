@@ -19,7 +19,7 @@ import autumn from "../assets/autumn_work.png";
 import flat from "../assets/flat,373x,075,f.jpg";
 import MH from "../assets/MH.png";
 import Yokai from "../assets/icon.png";
-import SaveState from "../assets/SaveStateFullLogo-backgroundRemoved.jpeg";
+import eatWaffle from "../assets/eatwaffle.png"
 import Prepair from "../assets/prepAir.plane.png";
 
 function Home() {
@@ -63,7 +63,7 @@ function Home() {
         <Swiper
           modules={[Navigation, Pagination, Scrollbar, A11y]}
           spaceBetween={50}
-          slidesPerView={3}
+          slidesPerView={4}
           navigation
         >
           <SwiperSlide>
@@ -142,18 +142,17 @@ function Home() {
             </div>
           </a>
           <a
-            href="https://github.com/GendySparrowhawk/Save_State"
+            href="https://punchbrunch.netlify.app/"
             target="_blank"
             rel="noopener noreferrer"
           >
             <div className="workcard">
               <div className="work-header">
-                <h2>SaveState</h2>
-                <img src={SaveState} alt="Save State" />
+                <h2>Punch Brunch RSVP</h2>
+                <img src={eatWaffle} alt="waffles" />
               </div>
               <p>
-                Another group project where I mostly worked on the backend.
-                Getting API calls working both internally and externally.
+              A quick little website I made. It was great practice for basic front and back end JS and a lot of scss styles. The main purpose was to get a more accurate guest list for the monthly get togethers we have. 
               </p>
             </div>
           </a>
@@ -175,6 +174,7 @@ function Home() {
               </p>
             </div>
           </a>
+          
         </div>
       </div>
 
