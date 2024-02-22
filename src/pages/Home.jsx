@@ -47,7 +47,7 @@ function Home() {
       <section className="cta">
         <div className="text">
           <h1>Jacob Hoefer</h1>
-          <p>From png to pwa and everything in between</p>
+          <p>Graphic designer with a penchant for coding </p>
           <p>Check out my work below</p>
         </div>
 
@@ -110,7 +110,7 @@ function Home() {
       </div>
       <div className="fullstack">
         <div className="Fdev">
-          <h2>Full Stack Development</h2>
+          <h2>Fullstack Development</h2>
           <p>
             You can find all of my work on my{" "}
             <a
@@ -167,7 +167,7 @@ function Home() {
                 <img src={Prepair} alt="Perp-Air" />
               </div>
               <p>
-                The 1st group project I worked on. A lot of great first steps,
+                The first group project I worked on. A lot of great first steps,
                 including learning how to use the google maps API and the basics
                 of JS syntax. It's a simple website but I really like what we
                 did with the time and knowledge we had.{" "}
@@ -179,7 +179,7 @@ function Home() {
       </div>
 
       <div className="works">
-        <h2>Vieo Editing</h2>
+        <h2>Video Editing</h2>
         <div className="video-container">
           <iframe
             width="560"
